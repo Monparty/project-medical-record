@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../resources/css/main.css">
+    <style>
+        .parent {
+            width:100%;
+            overflow-x: hidden; 
+            float:left;
+            
+            &:hover {
+                overflow-x: scroll; 
+            }
+        }
+
+        .child{
+            display: flex;
+            width: 60vw;
+            float:left;
+            font-size:15px;
+            font-family:arial;
+            padding:10px;
+            cursor: pointer;
+            gap: 15px;
+        }
+
+        .card {
+            
+            box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+            width: 100%;
+            height: 150px;
+            border-radius: 15px;
+
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 5px;
+                margin: 10px;
+            }
+            
+        }
+
+        .card:hover {
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        }
+
+        .cardItem {
+            padding: 10px;
+            width: 150px;
+            border-top: 1px solid var(--gray1);
+
+            .cardDetail {
+                overflow-y: hidden;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="boxSidebar">
+            <?php include("layouts/sidebar.html");?>
+        </div>
+        <div class="content">
+            <section class="header">
+                <h1>Good evening, Suniti Sukontaprapun</h1>
+            </section>
+            <section class="box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgba(129, 129, 126, 1);"><path d="M6 22h15v-2H6.012C5.55 19.988 5 19.805 5 19s.55-.988 1.012-1H21V4c0-1.103-.897-2-2-2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3zM5 8V5c0-.805.55-.988 1-1h13v12H5V8z"></path><path d="M8 6h9v2H8z"></path></svg>
+                <h5>tets</h5>
+            </section>
+            <section>
+                <div class="parent">
+                    <div class="child"> 
+                    <?php for($i=0; $i < 10; $i++) { ?>   
+                        <div class="card">
+                            <img src="https://picsum.photos/200" alt="Avatar">
+                            <div class="cardItem">
+                                <h4>John Doe</h4> 
+                                <h5 class="cardDetail">ArchitectEngineer ArchitectEngineer ArchitectEngineer ArchitectEngineer</h5> 
+                            </div>
+                        </div>
+                    <?php } ?> 
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+<script src="../resources/js/script.js"></script>
+<script>
+let mouseDown = false;
+let startX, scrollLeft;
+const slider = document.querySelector('.parent');
+
+const startDragging = (e) => {
+    mouseDown = true;
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+}
+
+const stopDragging = (e) => {
+    mouseDown = false;
+}
+
+const move = (e) => {
+    e.preventDefault();
+    if(!mouseDown) { return; }
+    const x = e.pageX - slider.offsetLeft;
+    const scroll = x - startX;
+    slider.scrollLeft = scrollLeft - scroll;
+}
+
+// Add the event listeners
+slider.addEventListener('mousemove', move, false);
+slider.addEventListener('mousedown', startDragging, false);
+slider.addEventListener('mouseup', stopDragging, false);
+slider.addEventListener('mouseleave', stopDragging, false);
+</script>
+</body>
+</html>
