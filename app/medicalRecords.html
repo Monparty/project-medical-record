@@ -5,39 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>เวชระเบียน</title>
     <link rel="stylesheet" href="../resources/css/main.css">
-    <style>
-        .boxInput {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        input {
-            height: 40px;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid var(--gray1);
-            outline: none;
-            box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-            
-            &:focus {
-                box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-            }
-        }
-        
-        select {
-            height: 40px;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid var(--gray1);
-            outline: none;
-            box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-
-            &:focus {
-                box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -95,6 +62,35 @@
                     <div class="boxInput">
                         <h5>เบอร์โทร</h5>
                         <input type="number" class="w200" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==10) return false;">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="boxInput">
+                        <h5>จังหวัด</h5>
+                        <select class="w200">
+                            <option value="">-</option>
+                            <option value="">นาย</option>
+                        </select>
+                    </div>
+                    <div class="boxInput">
+                        <h5>อำเภอ</h5>
+                        <select class="w200">
+                            <option value="">-</option>
+                            <option value="">นาย</option>
+                        </select>
+                    </div>
+                    <div class="boxInput">
+                        <h5>ตำบล</h5>
+                        <select class="w200">
+                            <option value="">-</option>
+                            <option value="">นาย</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="boxInput">
+                        <h5>จังหวัด</h5>
+                        <textarea name=""></textarea>
                     </div>
                 </div>
             </form>

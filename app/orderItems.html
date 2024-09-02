@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สั่งรายการ</title>
+    <link rel="stylesheet" href="../resources/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="boxSidebar">
+            <?php include("layouts/sidebar.html");?>
+        </div>
+        <div class="content">
+            <section class="header">
+                <h1>Good evening, Suniti Sukontaprapun</h1>
+            </section>
+            <section class="box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgba(129, 129, 126, 1);"><path d="M6 22h15v-2H6.012C5.55 19.988 5 19.805 5 19s.55-.988 1.012-1H21V4c0-1.103-.897-2-2-2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3zM5 8V5c0-.805.55-.988 1-1h13v12H5V8z"></path><path d="M8 6h9v2H8z"></path></svg>
+                <h5>ข้อมูลลูกค้า</h5>
+            </section>
+            <style>
+                .borderBox {
+                    border: 1px solid var(--gray1);
+                    padding: 10px;
+                    width: 100%;
+                    border-radius: 10px;
+                }
+
+                .containerOrder {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    gap: 10px;
+                }
+
+                table {
+                    width: 100%;
+
+                    thead {
+                        height: 20px;
+                        background-color: var(--gray1);
+                    }
+                }
+
+                .listItems {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    width: 100%;
+                    gap: 10px;
+                }
+
+                .cardItem {
+
+                    img {
+                        width: 100%;
+                        height: 100px;
+                    }
+                }
+            </style>
+            <section class="box">
+                <div class="containerOrder">
+                    <div class="borderBox tableList">
+                        <table border="1">
+                            <thead>
+                                <tr align="center">
+                                    <td width="10%">#</td>
+                                    <td width="40%">รายการ</td>
+                                    <td width="16%">จำนวน</td>
+                                    <td width="20%">ราคา</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td align="center">1</td>
+                                    <td>xxx xxxx xxxxx</td>
+                                    <td align="center">xx</td>
+                                    <td align="right">xxx.xx</td>
+                                    <td align="center"><button>ลบ</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="borderBox orderItems">
+                        <div class="boxSearch">
+                            <input type="text">
+                        </div>
+                        <div class="listItems">
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                            <div class="cardItem">
+                                <img src="https://picsum.photos/200">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+<script src="../resources/js/script.js"></script>
+<script>
+
+</script>
+</body>
+</html>
